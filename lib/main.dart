@@ -102,7 +102,7 @@ Widget titleSection = Container(
 );
 
 Widget textSection = Container(
-  margin: EdgeInsets.fromLTRB(0, 5, 0, 50),
+  margin: EdgeInsets.fromLTRB(0, 5, 0, 20),
   child: Text(
     'Page de connexion Flutter',
     style: GoogleFonts.comfortaa(
@@ -249,7 +249,6 @@ class ButtonWidget extends StatelessWidget {
 }
 
 Widget bottomSection = Container(
-  padding: EdgeInsets.all(20),
   margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
   child: Row(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -289,7 +288,7 @@ class SignupButton extends StatelessWidget {
 }
 
 Widget forgetPassword = Container(
-  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+  margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
   child: FlatButton(
     onPressed: () {},
     child: Text(

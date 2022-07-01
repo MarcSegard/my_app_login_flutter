@@ -35,6 +35,9 @@ class LoginPage extends StatelessWidget {
               titleSection,
               textSection,
               inputSection,
+              ButtonWidget(),
+              bottomSection,
+              forgetPassword,
             ],
           ),
         ),
@@ -216,5 +219,85 @@ Widget inputSection = Container(
         ),
       ),
     ],
+  ),
+);
+
+class ButtonWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SignupPage(),
+          ),
+        );
+      },
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30),
+      ),
+      color: Colors.white,
+      textColor: Colors.blue.shade900,
+      padding: EdgeInsets.fromLTRB(120, 15, 120, 15),
+      child: Text(
+        'Connexion'.toUpperCase(),
+        style: TextStyle(fontSize: 20),
+      ),
+    );
+  }
+}
+
+Widget bottomSection = Container(
+  padding: EdgeInsets.all(20),
+  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(
+        'Pas encore de compte ?',
+        style: GoogleFonts.comfortaa(
+          color: Colors.white,
+        ),
+      ),
+      SignupButton(),
+    ],
+  ),
+);
+
+class SignupButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SignupPage(),
+          ),
+        );
+      },
+      child: Text(
+        'Inscrivez-vous',
+        style: GoogleFonts.comfortaa(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+}
+
+Widget forgetPassword = Container(
+  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+  child: FlatButton(
+    onPressed: () {},
+    child: Text(
+      'Mot de passe Oublié ?',
+      style: GoogleFonts.comfortaa(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
   ),
 );
